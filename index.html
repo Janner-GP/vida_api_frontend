@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Fulanito</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Gestión de Usuarios</h1>
+
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8 border-t-4 border-indigo-500">
+            <h2 id="formTitle" class="text-xl font-semibold mb-4 text-gray-700">Agregar Nuevo Usuario</h2>
+            <form id="userForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="hidden" id="userId">
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Nombre</label>
+                    <input type="text" id="userName" required
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2 border focus:ring-indigo-500 focus:outline-none"
+                        placeholder="Ej: Fulanito">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600">Fecha de Nacimiento</label>
+                    <input type="date" id="birthDate" required
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2 border focus:ring-indigo-500 focus:outline-none">
+                </div>
+                <div class="flex items-end">
+                    <button type="submit" id="submitBtn"
+                        class="w-full bg-indigo-600 text-white font-bold py-2 px-4 rounded hover:bg-indigo-700 transition duration-200">
+                        Guardar Usuario
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID
+                            Resumido</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Nombre</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Nacimiento</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody" class="bg-white divide-y divide-gray-200">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>

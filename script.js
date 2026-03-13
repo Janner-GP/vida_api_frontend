@@ -126,4 +126,4 @@ function resetForm() {
 }
 
 // Inicializar
-fetchUsers();
+await fetchUsers();

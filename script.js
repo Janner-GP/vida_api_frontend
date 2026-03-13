@@ -21,7 +21,7 @@ async function fetchUsers() {
     try {
         const response = await fetch(API_URL);
         const users = await response.json();
-        renderTable(users);
+        renderTable(users.response);
     } catch (error) {
         console.error("Error al obtener usuarios:", error);
     }
